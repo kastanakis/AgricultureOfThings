@@ -18,11 +18,11 @@
 
 ## What software you need for this project
 - Arduino
-  - Arduino IDE (and this library)
-  - Library
+  - Arduino IDE
+  - <a href="https://tmrh20.github.io/RF24/">NRF24L01+ Library</a>
 - Raspberry Pi
   - Rasbian OS
-  - Lbrary
+  - Library
   - NodeJS
   - Npm
 - Machine Learning
@@ -38,11 +38,36 @@
 ## Installation
 
 ### Arduino
+- Arduino-Sensors Pins Layout
+<img src="./images/arduino_pin_layout.png" >
+
+- Load Code to the board and start Transmitting
+  - Open Arduino IDE
+  - Open `Tools->Manage Libraries` and install the `RF24 by TMRh20` lirbary
+  - Load the code from the file: `./arduino/transmitter.ino` to the Arduino
 
 ### Raspberry Pi
 
 #### Receiver
+- Raspberry-nRF27l01+ Pins Layout
+<img src="./images/raspberry_pin_layout.png">
 
+- Install the Library
+  - Clone this <a href="https://github.com/nRF24/RF24">repo</a> to your Raspberry Pi
+  - Execute the commands bellow
+    ```shell
+    $ cd ~/Downloads/RF24/
+    $ ./configure
+    $ make
+    ```
+
+- Start Receiving
+  - Execute the commands bellow
+    ```shell
+    $ cd ~/Downloads/AgricultureOfThings/raspberry-pi/rf24-receiver/
+    $ g++ receiver.cpp -o receiver -L/home/pi/Downloads/RF24 -lrf24
+    $ ./receiver & 
+    ```
 ##### Server
 
 ### Machine Learning
