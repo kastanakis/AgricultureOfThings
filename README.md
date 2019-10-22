@@ -19,10 +19,10 @@
 ## What software you need for this project
 - Arduino
   - Arduino IDE
-  - <a href="https://tmrh20.github.io/RF24/">NRF24L01+ Library</a>
+  - <a href="https://tmrh20.github.io/RF24/">NRF24L01+</a> Library
 - Raspberry Pi
   - Rasbian OS
-  - Library
+  - <a href="https://tmrh20.github.io/RF24/">NRF24L01+</a> Library
   - NodeJS
   - Npm
 - Machine Learning
@@ -53,21 +53,21 @@
 <img src="./images/raspberry_pin_layout.png">
 
 - Install the Library
-  - Clone this <a href="https://github.com/nRF24/RF24">repo</a> to your Raspberry Pi
-  - Execute the commands bellow
-    ```shell
-    $ cd ~/Downloads/RF24/
-    $ ./configure
-    $ make
-    ```
+> Download and install the RF24 library
+```shell
+$ git clone https://github.com/nRF24/RF24
+$ cd ~/Downloads/RF24/
+$ ./configure
+$ make
+```
 
 - Start Receiving
-  - Execute the commands bellow
-    ```shell
-    $ cd ~/Downloads/AgricultureOfThings/raspberry-pi/rf24-receiver/
-    $ g++ receiver.cpp -o receiver -L/home/pi/Downloads/RF24 -lrf24
-    $ ./receiver & 
-    ```
+> Compile and run the receiver.cpp
+```shell
+$ cd <this repo path>/raspberry-pi/rf24-receiver/
+$ g++ receiver.cpp -o receiver -L/home/pi/Downloads/RF24 -lrf24
+$ ./receiver & 
+```
 ##### Server
 
 ### Machine Learning
