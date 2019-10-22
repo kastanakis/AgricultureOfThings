@@ -1,0 +1,21 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Rest api for bias-goggles",
+  "main": "index.js",
+  "dependencies": {
+    "date-and-time": "^0.10.0",
+    "express": "^4.17.1",
+    "pg": "^7.12.1",
+    "read-last-lines": "^1.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  },
+  "scripts": {
+    "start": "nodemon ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ioannis Konstantakis",
+  "license": "ISC"
+}
