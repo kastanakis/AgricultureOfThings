@@ -5,8 +5,8 @@ const date = require('date-and-time');
 
 app.get("/last-day", (req, res, next) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
-	console.log("request for last-day received");
-	readLastLines.read('./sensor1.json', 360)
+	//console.log("request for last-day received");
+	readLastLines.read('../data/results.txt', 360)
 		.then((lines) => {
 			var x = '[\n' + lines.substring(0, lines.length - 1) + '\n]';
 			obj = JSON.parse(x);
@@ -37,9 +37,9 @@ app.get("/last-day", (req, res, next) => {
 
 app.get("/last-week", (req, res, next) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
-	console.log("request for last-week received");
+	//console.log("request for last-week received");
 	total_read_lines = 2880;
-	readLastLines.read('./sensor1.json', total_read_lines)
+	readLastLines.read('../data/results.txt', total_read_lines)
 		.then((lines) => {
 			var x = '[\n' + lines.substring(0, lines.length - 1) + '\n]';
 			obj = JSON.parse(x);

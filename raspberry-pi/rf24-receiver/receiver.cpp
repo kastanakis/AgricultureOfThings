@@ -53,27 +53,24 @@ main(int argc, char** argv)
 
 void
 save_data(char* result){
-	int msgNum, m1, m2, h, t;
-	float mp1, mp2;
+	int msgNum, m1, h, t;
+	float mp1;
 	char json[128] = "", json2[128]="", raw[10000]="";
-	sscanf(result, "%d, %d, %d, %d, %d", &msgNum, &m1, &m2, &h, &t);
+	sscanf(result, "%d, %d, %d, %d, %d", &msgNum, &m1, &h, &t);
 
 	time_t timestamp = time(nullptr);
 
 	int curr_timestamp = (int) timestamp;
 
-	sprintf(raw, "{\"MessageNum\" : %d, \"Timestamp\" : %d, \"Moisture1\" : %d, \"Moisture2\" : %d, \"Humidity\" : %d, \"Temperature\" : %.d},", msgNum, (int) timestamp, m1, m2, h, t);
-	write_to_file ("./results/raw_data.txt", raw);
+	sprintf(raw, "{\"MessageNum\" : %d, \"Timestamp\" : %d, \"Moisture1\" : %d, \"Humidity\" : %d, \"Temperature\" : %.d},", msgNum, (int) timestamp, m1, h, t);
+	write_to_file ("../data/raw_data.txt", raw);
 
 	mp1 = convert_moisture(m1);
-	mp2 = convert_moisture(m2);
 
 	string dateStr = timeStampToHReadble(curr_timestamp);
 	sprintf(json, "{\"Timestamp\" : \"%s\", \"Moisture\" : %.2f, \"Humidity\" : %d, \"Temperature\" : %d},",dateStr.c_str(), mp1, h, t);
-	write_to_file("./results/sensor1.json", json);
+	write_to_file("../data/results.txt", json);
 
-	sprintf(json2, "{\"Timestamp\" : \"%s\", \"Moisture\" : %.2f, \"Humidity\" : %d, \"Temperature\" : %d},",dateStr.c_str(), mp2, h, t);
-	write_to_file("./results/sensor2.json", json2);
 }
 
 void write_to_file (string path, char* data){
