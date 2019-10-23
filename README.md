@@ -94,7 +94,7 @@ private const val BASE_URL = "<SERVER_LOCAL_IP>";
     <domain includeSubdomains="true">SERVER_LOCAL_IP</domain>
 </domain-config>
 ```
-- Follow this <a href="https://www.google.com/search?sxsrf=ACYBGNQKs0acHAsWa5DUQYUEpE2Wrcljtg%3A1571835012110&source=hp&ei=hEywXZPyA8-QkwXR4KOYBw&q=how+to+install+android+app&oq=how+to+install+android+app&gs_l=psy-ab.3..0l10.862.9140..9455...5.0..0.186.3477.10j21......0....1..gws-wiz.......0i131j0i13j0i22i30.tKcNbfmjLiY&ved=0ahUKEwiTxKjctbLlAhVPyKQKHVHwCHMQ4dUDCAU&uact=5">tutorial</a> to install the application to your smartphone
+- Follow this <a href="https://developer.android.com/training/basics/firstapp/running-app?fbclid=IwAR3sIRCFqDwvYPwYhAhBavq_VIFlHwuWzofZ9Ty5DmZbMAXllioKPjQN_Yc">tutorial</a> to run the Application on a real device.
 
 ## License
 
