@@ -69,29 +69,33 @@ $ g++ receiver.cpp -o receiver -L/home/pi/Downloads/RF24 -lrf24
 $ ./receiver & 
 ```
 ##### Server
+Use your raspberry pi as server in your local network for the android application.
+> Serve the data that received from the Arduino.
+```shell
+$ cd <this repo path>/raspberry-pi/android-app-server/
+$ npm start 
+```
+
 
 ### Machine Learning
 
 ### Android Application
+- Open Android Studio
+- Select `Import project (Gradle, Eclipse ADT, etc.)`
+- Naviage to the folder `<this repo path>/android-app` and select `OpenAgriculture`
+- Change `SERVER_LOCAL_IP` in the files bellow to your server's IP
 
-
-- All the `code` required to get started
-- Images of what it should look like
-- If you want more syntax highlighting, format your code like this:
-
-> update and install this package first
-
-```shell
-$ brew update
-$ brew install fvcproductions
+./app/src/main/java/com/example/openagriculture/<a href="./android-app/OpenAgriculture/app/src/main/java/com/example/openagriculture/OApiService.kt">OApiService.kt</a>
+```kotlin
+private const val BASE_URL = "<SERVER_LOCAL_IP>";
 ```
-
-> now install npm and bower packages
-
-```shell
-$ npm install
-$ bower install
+./app/src/main/res/xml/<a href="./android-app/OpenAgriculture/app/src/main/res/xml/network_security_config.xml">network_security_config.xml</a>
+```xml
+<domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">SERVER_LOCAL_IP</domain>
+</domain-config>
 ```
+- Follow this <a href="https://www.google.com/search?sxsrf=ACYBGNQKs0acHAsWa5DUQYUEpE2Wrcljtg%3A1571835012110&source=hp&ei=hEywXZPyA8-QkwXR4KOYBw&q=how+to+install+android+app&oq=how+to+install+android+app&gs_l=psy-ab.3..0l10.862.9140..9455...5.0..0.186.3477.10j21......0....1..gws-wiz.......0i131j0i13j0i22i30.tKcNbfmjLiY&ved=0ahUKEwiTxKjctbLlAhVPyKQKHVHwCHMQ4dUDCAU&uact=5">tutorial</a> to install the application to your smartphone
 
 ## License
 
