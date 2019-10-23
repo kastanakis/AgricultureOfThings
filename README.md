@@ -18,18 +18,17 @@
 
 ## What software you need for this project
 - Arduino
-  - Arduino IDE
+  - <a href="https://www.arduino.cc/en/main/software">Arduino IDE</a>
   - <a href="https://tmrh20.github.io/RF24/">NRF24L01+</a> Library
 - Raspberry Pi
-  - Rasbian OS
+  - <a href="https://www.raspberrypi.org/downloads/raspbian/">Rasbian OS</a>
   - <a href="https://tmrh20.github.io/RF24/">NRF24L01+</a> Library
-  - NodeJS
-  - Npm
+  - <a href="https://www.instructables.com/id/Install-Nodejs-and-Npm-on-Raspberry-Pi/">NodeJS & Npm</a>
 - Machine Learning
   - 1
   - 2
 - Android Application
-  - Android Studio
+  - <a href="https://developer.android.com/studio">Android Studio</a>
 ---
 
 ## Clone
