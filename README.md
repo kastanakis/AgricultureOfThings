@@ -24,9 +24,6 @@
   - <a href="https://www.raspberrypi.org/downloads/raspbian/">Rasbian OS</a>
   - <a href="https://tmrh20.github.io/RF24/">NRF24L01+</a> Library
   - <a href="https://www.instructables.com/id/Install-Nodejs-and-Npm-on-Raspberry-Pi/">NodeJS & Npm</a>
-- Machine Learning
-  - 1
-  - 2
 - Android Application
   - <a href="https://developer.android.com/studio">Android Studio</a>
 ---
@@ -74,9 +71,6 @@ Use your raspberry pi as server in your local network for the android applicatio
 $ cd <this repo path>/raspberry-pi/android-app-server/
 $ npm start 
 ```
-
-
-### Machine Learning
 
 ### Android Application
 - Open Android Studio
