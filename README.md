@@ -1,10 +1,6 @@
 <img src="./images/scheme.png" >
 
 # Argriculture Of Things
-
-> Subtitle or Short Description Goes Here
-
-> include terms/tags that can be searched
 ---
 
 ## Hardware
